@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { EventBus } from "@/main";
 
 export default class ContactProxy {
-    entorno : string;
-    baseurl : string;
+    entorno: string;
+    baseurl: string;
 
     constructor(pentorno: string) {
         this.entorno = (pentorno || 'dev').toLowerCase();
@@ -14,14 +15,16 @@ export default class ContactProxy {
         }
     }
     // Obtiene un contacto con sus llamadas
-    async getContact(peasycode : number) {
+    async getContact(peasycode: number) {
         let res = null;
-        let url = `${this.baseurl}/${peasycode}`;
+        const url = `${this.baseurl}/${peasycode}`;
         try {
             const response = await axios.get(url);
             res = response.data;
         } catch(ex){
-            console.log(`getContact ERROR! entorno[${this.entorno}] easycode[${peasycode}] ${ex.message}`);
+            const msg = `getContact ERROR! entorno[${this.entorno}] easycode[${peasycode}] ${ex.message}`;
+            console.log(msg);
+            EventBus.$emit("merror", msg);
             res = {ok: false, message: ex.message};
         }
         return res;

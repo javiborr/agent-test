@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve --mode development --open",
     "build": "vue-cli-service build --mode development",
     "test:unit": "vue-cli-service test:unit",
+    "test:unit:proxy": "vue-cli-service test:unit -- contactproxy",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
