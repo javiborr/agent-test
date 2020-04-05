@@ -9,6 +9,31 @@
     "test:unit:proxy": "vue-cli-service test:unit -- contactproxy",
     "lint": "vue-cli-service lint"
   },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-useless-escape": "warn",
+      "getter-return": "warn",
+      "no-prototype-builtins": "warn",
+      "no-unused-vars": "warn",
+      "no-compare-neg-zero": "warn",
+      "no-undef": "warn",
+      "no-redeclare": "warn",
+      "no-shadow-restricted-names": "warn",
+      "no-constant-condition": "warn",
+      "no-mixed-spaces-and-tab": "off"
+    }
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
