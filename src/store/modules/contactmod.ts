@@ -5,8 +5,8 @@ export const state = {
   current: {}
 }
 export const getters = {
-  getcurrent: (pstate: any) => {
-    console.log(`VUEX getcurrent [${pstate.current}]`);
+  getCurrent: (pstate: any) => {
+    console.log(`VUEX getCurrent [${pstate.current}]`);
     return pstate.current;
   }
 }
