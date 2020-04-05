@@ -1,0 +1,10 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  /*padding-top: 4.5rem;*/
+}

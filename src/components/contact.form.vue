@@ -1,6 +1,40 @@
 <template>
     <div>
-        <div>Nombre: {{ currentContact.nombre}}&nbsp;{{ currentContact.apellido1}}
+        <div class="card">
+            <div class="card-header">
+                Llamada saliente {{currentContact.campana.nombre}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"><i class="material-icons mdc-button__icon" aria-hidden="true">face</i>&nbsp;{{ currentContact.nombre}}&nbsp;{{ currentContact.apellido1}}&nbsp;{{ currentContact.apellido2}}</h5>
+                <p class="card-text">NIF: {{ currentContact.nif}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ currentContact.telefono1}}&nbsp;{{ currentContact.telefono2}}&nbsp;{{ currentContact.telefono3}}&nbsp;{{ currentContact.telefono4}}</li>
+                <li class="list-group-item">{{ currentContact.domicilio}}&nbsp;{{ currentContact.cpostal}}&nbsp;{{ currentContact.localidad}}</li>
+                <li class="list-group-item"></li>
+            </ul>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
         </div>
     </div>
 </template>

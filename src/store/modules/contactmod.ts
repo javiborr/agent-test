@@ -2,7 +2,11 @@ import { EventBus } from "@/main";
 import ContactProxy from '@/api/contactproxy';
 
 export const state = {
-  current: {}
+  current: {
+    campana: {
+      nombre: ''
+    }
+  }
 }
 export const getters = {
   getCurrent: (pstate: any) => {
