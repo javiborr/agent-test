@@ -2,10 +2,12 @@
     <div>
         <div class="card">
             <div class="card-header">
-                Llamada saliente {{currentContact.campana.nombre}}
+                <span class="destaca">{{currentContact.campana.nombre}}</span>
+                &nbsp;llamada saliente&nbsp;
+                <span class="destaca">{{currentLlamada.telephone}}</span>
             </div>
             <div class="card-body">
-                <h5 class="card-title"><i class="material-icons">account_circle</i>&nbsp;{{ currentContact.nombre}}&nbsp;{{ currentContact.apellido1}}&nbsp;{{ currentContact.apellido2}}</h5>
+                <h5 class="card-title"><i class="material-icons">face</i>&nbsp;{{ currentContact.nombre}}&nbsp;{{ currentContact.apellido1}}&nbsp;{{ currentContact.apellido2}}</h5>
                 <p class="card-text">NIF: {{ currentContact.nif}}</p>
             </div>
             <ul class="list-group list-group-flush">
@@ -58,8 +60,12 @@ const mapcontactmod = createNamespacedHelpers('contactmod')
 export default {
     computed: {
         ...mapcontactmod.mapGetters({
-            currentContact: 'getCurrent'
+            currentContact: 'getCurrent',
+            currentLlamada: 'getLlamada'
         }),
+        telefono() {
+            return this.currentLlamada.telephone;
+        },
         listPhones() {
             const c = this.currentContact;
             const ls = [];
@@ -76,5 +82,9 @@ export default {
 <style scoped>
 .material-icons {
     font-size: 20px;
+}
+.destaca {
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 </style>

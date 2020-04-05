@@ -1,7 +1,7 @@
 <template>
   <div class="text-align-center">
     <input type="text" 
-        v-model="contactid"
+        v-model="llamadaid"
         id="contactidinput" placeholder="ID del contacto">
     <button @click="actionClick()">Click</button>
   </div>
@@ -16,19 +16,19 @@ const mapcontactmod = createNamespacedHelpers('contactmod')
 export default {
     data() {
         return {
-            contactid: 0
+            llamadaid: 1
         }
     },
     methods: {
-        ...mapcontactmod.mapActions(['fetchContact'])
+        ...mapcontactmod.mapActions(['fetchLlamadaContact'])
         ,
         async actionClick() {
-            const id = parseInt(this.contactid);
-            console.log(`actionClick [${this.contactid}:${id}]`);
+            const id = parseInt(this.llamadaid);
+            console.log(`actionClick [${this.llamadaid}:${id}]`);
             //this.$store.commit('ui/SET_UI_BUSY', true);
             //const inputValue = event.target.value
-            await this.fetchContact(id);
-            EventBus.$emit("msuccess", `Prueba realizada [${this.contactid}]`);
+            await this.fetchLlamadaContact(id);
+            EventBus.$emit("msuccess", `Prueba realizada [${this.llamadaid}]`);
         }
     }
 }
