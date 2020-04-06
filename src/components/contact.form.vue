@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header">
                 <span class="destaca">{{currentContact.campana.nombre}}</span>
-                &nbsp;llamada saliente&nbsp;
+                &nbsp;Llamada saliente&nbsp;
                 <span class="destaca">{{currentLlamada.telephone}}</span>
             </div>
             <div class="card-body">
