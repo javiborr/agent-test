@@ -1,12 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Prueba Saliente</router-link> |
       <router-link to="/inbound">Prueba Entrante</router-link>
     </div>
-    <router-view/>
+    <router-view/> -->
+      <loader />
+      <contact-form />
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Loader from '@/components/loader.vue'
+import ContactForm from '@/components/contact.form.vue'
+
+export default {
+  components: {
+    Loader,
+    ContactForm
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

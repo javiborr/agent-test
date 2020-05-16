@@ -8,9 +8,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-export const EventBus = new Vue();
+// export const EventBus = new Vue();
 
 Vue.config.productionTip = false
+Vue.config.ignoredElements = [
+  'smart-grid'
+]
 
 new Vue({
   router,

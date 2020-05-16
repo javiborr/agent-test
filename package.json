@@ -1,5 +1,5 @@
 {
-  "name": "agent-test",
+  "name": "telemark_outbound",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,6 +22,7 @@
       "parser": "babel-eslint"
     },
     "rules": {
+      "no-non-null-assertion": true,
       "no-useless-escape": "warn",
       "getter-return": "warn",
       "no-prototype-builtins": "warn",
@@ -41,6 +42,7 @@
     "jquery": "^3.4.1",
     "material-design-icons": "^3.0.1",
     "popper.js": "^1.16.1",
+    "smart-webcomponents": "^7.4.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"

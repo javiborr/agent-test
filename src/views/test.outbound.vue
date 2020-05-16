@@ -1,23 +1,24 @@
 <template>
-  <div class="home">
-    <diV>
-      <LoadContactTester />
-    </diV>
-    <diV>
-      <ContactForm />
-    </diV>
+  <div>
+    <!-- <load-contact-tester /> -->
+      <loader />
+      <contact-form />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import LoadContactTester from '@/components/test/loadcontacttest.vue'
+//import LoadContactTester from '@/components/test/loadcontacttest.vue'
+import Loader from '@/components/loader.vue'
 import ContactForm from '@/components/contact.form.vue'
+//import LlamadasOutLista from '@/components/llamada.out.list.vue'
 
 export default {
   name: 'TestOutbound',
   components: {
-    LoadContactTester,
+    //LoadContactTester,
+    //LlamadasOutLista,
+    Loader,
     ContactForm
   }
 }
